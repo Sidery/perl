@@ -11,6 +11,7 @@
 =cut
 
 use strict;
+use warnings;
 
 my @array = getArray(10,50);
 @array = shellSort(@array);
@@ -19,12 +20,12 @@ showUnique(@array);
 
 sub getArray {
 	# First argument is range of array
-	my $range = @_[0];
+	my $range = shift;
 	# Second argument is size of array
-	my $size = @_[1];
+	my $size = shift;
 
 	my @tempArray;
-	for (my $i = 0; $i < $size; $i++) {
+	for my $i (0 .. $size) {
 		@tempArray[$i] = int(rand($range));
 	}
 
