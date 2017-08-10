@@ -23,4 +23,4 @@ while ($bytes >= 1024) {
 	$i++;
 }
 
-print "\n".$bytes." ".$size[$i]."\n";
+print $bytes." ".$size[$i]."\n";
