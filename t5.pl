@@ -23,7 +23,7 @@ getTime($format);
 sub getTime {
 		my $format = shift;
 		my ($sec,$min,$hour,$day,$mon,$year) = localtime(time);
-		$year += 1900;
+		$year += 1900; $mon += 1;
 	
 		$day = sprintf("%02s",$day);
 		$mon = sprintf("%02s",$mon);
